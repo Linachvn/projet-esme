@@ -1,2 +1,2 @@
-# projet-esme
+# projet-esme - Lina CHAUVIN
 Projet individuel
