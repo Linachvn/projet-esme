@@ -136,7 +136,8 @@ kafka_output_df = processed_df.select(
         col("humidity"),
         col("speed"),
         col("heat_index"),
-        col("severity_index")
+        col("severity_index"),
+        col("time_of_day")
     )).alias("value")  # Convertir les données en JSON pour Kafka
 )
 
