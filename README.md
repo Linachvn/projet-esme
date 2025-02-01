@@ -43,6 +43,7 @@ severity_index : Évalue la sévérité des conditions météorologiques en comb
 time_of_day : Catégorise l'heure de la journée en matin, après-midi, soirée ou nuit en fonction de l'horaire du timestamp.
 Ensuite, on ransforme les données en JSON pour les renvoyer vers Kafka. On écrit les données traitées dans le topic Kafka final "topic-weather-final"
 
+Le projet vise à développer un pipeline de traitement des données météorologiques en temps réel en combinant Kafka et Spark. L’objectif est de collecter des données depuis l’API OpenWeatherMap, de les stocker dans un topic nommé topic-weather, puis de les traiter avec Spark pour enrichir les informations en générant de nouvelles variables comme un indice de chaleur et un indice de sévérité météorologique. Les données transformées sont ensuite envoyées vers un second topic topic-weather-final. Ce projet permet le suivi en temps réel de la météo.
 
 
 
