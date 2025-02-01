@@ -38,9 +38,14 @@ Il affiche aussi les résultats en temps réel dans la console.
 
 On commence par définir le chemin vers Spark et crée une session Spark. Puis on définit la structure des messages JSON de Kafka pour faciliter le parsing, elle contient des champs comme température, pression, humidité, vitesse du vent. On se connecte à Kafka et au topic "topic-weather". Cela permet de lire les messages en continu, ensuite on décode les messages JSON pour extrait leur contenu et on convertit l'horodatage UNIX en timestamp lisible.
 Cela extrait la ville, le pays, la température, la pression, l'humidité, vent.
+
+
 heat_index : Calcule un indice de chaleur en fonction de la température et de l'humidité pour estimer la sensation thermique.
+
 severity_index : Évalue la sévérité des conditions météorologiques en combinant la vitesse du vent, la pression atmosphérique et l'humidité.
+
 time_of_day : Catégorise l'heure de la journée en matin, après-midi, soirée ou nuit en fonction de l'horaire du timestamp.
+
 Ensuite, on ransforme les données en JSON pour les renvoyer vers Kafka. On écrit les données traitées dans le topic Kafka final "topic-weather-final"
 
 Le projet vise à développer un pipeline de traitement des données météorologiques en temps réel en combinant Kafka et Spark. L’objectif est de collecter des données depuis l’API OpenWeatherMap, de les stocker dans un topic nommé topic-weather, puis de les traiter avec Spark pour enrichir les informations en générant de nouvelles variables comme un indice de chaleur et un indice de sévérité météorologique. Les données transformées sont ensuite envoyées vers un second topic topic-weather-final. Ce projet permet le suivi en temps réel de la météo.
