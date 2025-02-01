@@ -36,7 +36,7 @@ Il ajoute des indicateurs météo.
 Il réécrit les données enrichies dans un nouveau topic Kafka.
 Il affiche aussi les résultats en temps réel dans la console.
 
-On commence par définir le chemin vers Spark et crée une session Spark. Puis on définit la structure des messages JSON de Kafka pour faciliter le parsing, elle contient des champs comme température, pression, humidité, vitesse du vent. On se connecte à Kafka et au topic "topic-weather". Cela permet de lire les messages en continu, ensuite on décode les messages JSON pour extrait leur contenu et on convertit l'horodatage UNIX en timestamp lisible.
+On commence par définir le chemin vers Spark et crée une session Spark. Puis on définit la structure des messages JSON de Kafka pour faciliter le parsing, elle contient des champs comme température, pression, humidité, vitesse du vent. On se connecte à Kafka et au topic "topic-weather". Cela permet de lire les messages en continu, ensuite on décode les messages JSON pour extrait leur contenu.
 Cela extrait la ville, le pays, la température, la pression, l'humidité, vent.
 
 
